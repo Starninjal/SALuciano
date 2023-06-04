@@ -1,16 +1,15 @@
 package br.com.senai.view;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JMenuBar;
-import java.awt.Font;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import javax.swing.JTextArea;
-import javax.swing.JButton;
 
 public class ViewPrincipal extends JFrame {
 
@@ -45,7 +44,15 @@ public class ViewPrincipal extends JFrame {
 		JMenu mnNewMenu = new JMenu("Cadastros");
 		menuBar.add(mnNewMenu);
 		
+		setLocationRelativeTo(contentPane);
+		
 		JMenuItem mntmNewMenuItem = new JMenuItem("Mecanico");
+		mntmNewMenuItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ViewCadastroMecanico view = new ViewCadastroMecanico();
+				view.setVisible(true);
+			}
+		});
 		mnNewMenu.add(mntmNewMenuItem);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

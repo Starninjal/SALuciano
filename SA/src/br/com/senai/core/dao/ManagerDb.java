@@ -17,7 +17,7 @@ public class ManagerDb {
 	private ManagerDb() {
 		try {					
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			this.conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/oficina_mecanica", "root", "Btwimgood");
+			this.conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/oficina_mecanica", "root", "BR17johnn!");
 		} catch(Exception e) {
 			throw new RuntimeException("Ocorreu um erro ao conectar ao banco. Motivo: " + e.getMessage());
 		}
