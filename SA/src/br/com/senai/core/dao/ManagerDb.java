@@ -17,12 +17,21 @@ public class ManagerDb {
 	private ManagerDb() {
 		try {					
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			this.conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/oficina_mecanica", "root", "BR17johnn!");
+			this.conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/oficina_mecanica", "root", "Btwimgood");
 		} catch(Exception e) {
 			throw new RuntimeException("Ocorreu um erro ao conectar ao banco. Motivo: " + e.getMessage());
 		}
-		
-		
+	}
+	
+	public void configurarAutoCommitDa(Connection conexao, boolean isHabilitado) {
+		try {
+			if(conexao != null) {
+				conexao.setAutoCommit(isHabilitado);
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 	
 	public void fechar(PreparedStatement ps) {

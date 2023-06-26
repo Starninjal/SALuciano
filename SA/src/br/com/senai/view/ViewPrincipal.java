@@ -49,7 +49,7 @@ public class ViewPrincipal extends JFrame {
 		JMenuItem mntmNewMenuItem = new JMenuItem("Mecanico");
 		mntmNewMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ViewCadastroMecanico view = new ViewCadastroMecanico();
+				ViewMecanicoListagem view = new ViewMecanicoListagem();
 				view.setVisible(true);
 			}
 		});

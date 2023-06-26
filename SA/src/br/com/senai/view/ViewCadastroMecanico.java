@@ -81,5 +81,15 @@ public class ViewCadastroMecanico extends JFrame {
 		});
 		btnNewButton.setBounds(319, 439, 166, 61);
 		contentPane.add(btnNewButton);
+		
+	
+		
+		 
+	}
+	
+	public void setMecanico(Mecanico mecanico) {
+		this.mecanico = mecanico;
+		this.txtNomeMecanico.setText(mecanico.getNomeMecanico());
+		
 	}
 }
